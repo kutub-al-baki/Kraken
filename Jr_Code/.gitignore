@@ -1,0 +1,112 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# PyQt
+*.ui~
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+/tmp/
+rov_*.log
+sensor_data_*.csv
+sensor_data_*.txt
+
+# Configuration (keep template, ignore local overrides)
+config.local.json
+*.env
+.env
+
+# Test artifacts
+.pytest_cache/
+.coverage
+htmlcov/
+test_output/
+temp/
+
+# Media (large files)
+media/videos/*.mp4
+media/videos/*.avi
+media/images/*.raw
+
+# ROV Specific
+# Camera frames (temporary)
+frames/
+*.jpg
+*.jpeg
+*.png
+!media/images/*.jpg
+!media/images/*.jpeg
+!media/images/*.png
+
+# Video recordings
+*.mov
+!media/videos/.gitkeep
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+
+# SSH keys and credentials
+*.pem
+*.key
+id_rsa*
+*.ppk
+
+# Backup files
+*.bak
+*.backup
+
+# Documentation build
+docs/_build/
+docs/_static/
+docs/_templates/
+
+# Package archives
+*.tar.gz
+*.zip
+*.whl
+
+# Windows specific
+Desktop.ini
+$RECYCLE.BIN/
+ehthumbs.db
+
+# Linux specific
+.Trash-*
+
+# Compiled UI files
+*.ui.py
