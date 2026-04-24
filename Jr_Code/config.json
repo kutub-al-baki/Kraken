@@ -1,0 +1,59 @@
+{
+  "pixhawk": {
+    "connection_type": "serial",
+    "connection_string": "/dev/ttyAMA0:57600",
+    "notes": "Direct GPIO UART connection to Pixhawk (RX/TX/GND pins on Pi)"
+  },
+  "mavlink_connection": "tcp:raspberrypi.local:7000",
+  "joystick_target": null,
+  "camera": {
+    "stream_url0": "http://raspberrypi.local:8080/video_feed",
+    "stream_url1": "http://raspberrypi.local:8081/video_feed",
+    "legacy_pipeline0": "udpsrc port=5000 ! application/x-rtp,encoding-name=H264,payload=96 ! rtph264depay ! avdec_h264 ! videoconvert ! appsink",
+    "legacy_pipeline1": "udpsrc port=5001 ! application/x-rtp,encoding-name=H264,payload=97 ! rtph264depay ! avdec_h264 ! videoconvert ! appsink"
+  },
+  "sensors": {
+    "host": "raspberrypi.local",
+    "port": 5002,
+    "protocol": "tcp",
+    "mock_mode": false,
+    "auto_connect": true,
+    "auto_fallback": true
+  },
+  "network": {
+    "auto_detect": true,
+    "pi_hostname": "raspberrypi.local",
+    "ethernet_ip": "192.168.1.100",
+    "wifi_fallback_ip": "192.168.0.100",
+    "notes": "Use ethernet_ip for tethered underwater operations, pi_hostname for WiFi testing"
+  },
+  "thrusters": {
+    "total_count": 8,
+    "channel_mapping": {
+      "1": "forward_left",
+      "2": "yaw_left",
+      "3": "vertical_front_left",
+      "4": "vertical_front_right",
+      "5": "yaw_right",
+      "6": "vertical_rear_left",
+      "7": "vertical_rear_right",
+      "8": "forward_right"
+    }
+  },
+  "mavlink_auto_detect": true,
+  "update_rate_hz": 10,
+  "enable_safety_checks": true,
+  "notes": {
+    "pixhawk_serial": "Pixhawk connected via GPIO UART (RX/TX/GND) pins on Raspberry Pi",
+    "serial_port": "/dev/ttyAMA0 is Raspberry Pi primary GPIO UART",
+    "baud_rate": "57600 is standard for Pixhawk (can also try 115200)",
+    "mavlink_connection": "Ground Station connects to Pi via TCP relay server on port 7000",
+    "mavlink_auto_detect": "If true and connection fails, automatically scan serial ports to find Pixhawk",
+    "joystick_target": "Partial name match: 'xbox', 'switch', 'playstation', etc. Set to null to auto-detect any controller.",
+    "update_rate_hz": "Control loop frequency (recommended: 10-20 Hz)",
+    "camera": "Real camera streams from Raspberry Pi. Pi auto-detects Ground Station IP. Streams H.264 via UDP ports 5000/5001",
+    "sensors": "Real BMP388 sensor on Raspberry Pi. Pi runs sensor server on port 5002 (5000/5001 reserved for cameras). Uses 'raspberrypi.local' or auto-detected IP",
+    "network": "Auto-detection: Pi finds Ground Station via SSH client IP, gateway, or ARP. Ground Station finds Pi via mDNS (raspberrypi.local) or network scan",
+    "thrusters": "8-channel thruster configuration. All 8 thrusters are controlled via channels 1-8"
+  }
+}
