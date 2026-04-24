@@ -1,0 +1,69 @@
+# UIU MARINER - ROV Control Software v1.0
+# Python dependencies for PC control station (Ground Station)
+
+# Installation:
+#   Recommended: Use virtual environment
+#     .\setup.ps1              (PowerShell)
+#     setup.bat                (Command Prompt)
+#   
+#   OR manually:
+#     python -m venv venv
+#     .\venv\Scripts\Activate.ps1
+#     pip install -r requirements.txt
+
+# ============================================================
+# Core Dependencies
+# ============================================================
+
+# MAVLink communication (network to ROV)
+pymavlink>=2.4.41
+
+# Joystick input (Xbox/Switch controller)
+pygame>=2.5.2
+
+# GUI framework (Professional interface)
+PyQt6>=6.6.0
+
+# Computer vision and image processing
+opencv-python>=4.8.0       # Camera display and object detection
+numpy>=1.24.0              # Array operations for OpenCV
+
+# Serial communication (for port scanning)
+pyserial>=3.5
+
+# Configuration management
+python-dotenv>=1.0.0
+
+# ============================================================
+# Tested Versions (Last Updated: 2025-11-04)
+# ============================================================
+# pymavlink==2.4.49
+# pygame==2.6.1
+# PyQt6==6.10.0
+# opencv-python==4.12.0.88
+# numpy==2.2.6
+# pyserial==3.5
+# python-dotenv==1.2.1
+
+# ============================================================
+# Additional Requirements (Not in pip)
+# ============================================================
+
+# GStreamer (for camera video streaming)
+#   Windows: Download from https://gstreamer.freedesktop.org/download/
+#   Install both runtime and development packages
+#   Add to PATH: C:\gstreamer\1.0\msvc_x86_64\bin
+#   
+#   Test installation: gst-inspect-1.0 --version
+#   
+#   Note: OpenCV must be compiled with GStreamer support
+#   If cameras don't work, use test patterns in config.json:
+#     "pipeline0": "videotestsrc ! videoconvert ! appsink"
+
+# ============================================================
+# Python Version
+# ============================================================
+# Requires: Python 3.8 or higher
+# Tested with: Python 3.11.0
+#
+# Check your version: python --version
