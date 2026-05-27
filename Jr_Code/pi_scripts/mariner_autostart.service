@@ -1,0 +1,26 @@
+[Unit]
+Description=UIU MARINER - Automatic ROV System Startup
+After=network.target
+Wants=network-online.target
+
+[Service]
+Type=forking
+User=pi
+WorkingDirectory=/opt/mariner
+ExecStart=/bin/bash /opt/mariner/pi_autostart_all.sh start
+ExecStop=/bin/bash /opt/mariner/pi_autostart_all.sh stop
+ExecReload=/bin/bash /opt/mariner/pi_autostart_all.sh restart
+Restart=on-failure
+RestartSec=10
+
+# Security settings
+PrivateTmp=true
+NoNewPrivileges=true
+
+# Logging
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=mariner
+
+[Install]
+WantedBy=multi-user.target
