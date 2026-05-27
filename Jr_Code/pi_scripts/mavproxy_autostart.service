@@ -1,0 +1,17 @@
+[Unit]
+Description=MAVProxy Auto-Start for Pixhawk
+After=network.target
+
+[Service]
+Type=simple
+User=pi
+WorkingDirectory=/home/pi
+ExecStartPre=/bin/sleep 5
+ExecStart=/usr/bin/python3 /home/pi/pi_mavproxy_server.py --master /dev/ttyAMA0 --baudrate 57600 --port 7000
+Restart=always
+RestartSec=10
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
