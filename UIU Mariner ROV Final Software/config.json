@@ -1,0 +1,184 @@
+{
+  "mavlink_connection": "tcp:192.168.1.100:7000",
+  "camera": {
+    "stream_url0": "",
+    "stream_url1": "",
+    "stream_url2": "",
+    "stream_url3": ""
+  },
+  "sensors": {
+    "host": "192.168.1.100",
+    "port": 5002,
+    "protocol": "tcp",
+    "mock_mode": false,
+    "auto_connect": true
+  },
+  "mavlink_auto_detect": true,
+  "joystick_target": null,
+  "network": {
+    "auto_detect": true,
+    "pi_hostname": "192.168.1.100",
+    "webrtc_enabled": true,
+    "crab_detection_on_gcs": true
+  },
+  "lights": {
+    "port": 5004,
+    "pin": 23,
+    "min_pwm": 1100,
+    "max_pwm": 1900
+  },
+  "servo": {
+    "port": 5005,
+    "pin": 24,
+    "min_angle": 0,
+    "max_angle": 180
+  },
+  "control": {
+    "update_rate_hz": 50,
+    "deadzone": 0.05
+  },
+  "mixer": {
+    "matrix": [
+      [
+        -0.707,
+        0.707,
+        0.0,
+        0.0,
+        0.0,
+        0.707
+      ],
+      [
+        -0.707,
+        -0.707,
+        0.0,
+        0.0,
+        0.0,
+        -0.707
+      ],
+      [
+        -0.707,
+        -0.707,
+        0.0,
+        0.0,
+        0.0,
+        0.707
+      ],
+      [
+        -0.707,
+        0.707,
+        0.0,
+        0.0,
+        0.0,
+        -0.707
+      ],
+      [
+        0.0,
+        0.0,
+        -1.0,
+        1.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        -1.0,
+        -1.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        -1.0,
+        1.0,
+        -1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        1.0,
+        1.0,
+        0.0
+      ]
+    ],
+    "scale": 350.0,
+    "scales": [
+      350.0,
+      325.0,
+      364.0,
+      315.0,
+      330.0,
+      309.0
+    ],
+    "scales_pid": [
+      220.0,
+      220.0,
+      220.0,
+      220.0,
+      220.0,
+      220.0
+    ],
+    "scales_slow": [
+      150.0,
+      150.0,
+      150.0,
+      150.0,
+      150.0,
+      150.0
+    ],
+    "bias": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "channel_map": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "alpha": 0.35,
+    "motors": 8
+  },
+  "pid": {
+    "depth_hold": {
+      "pos_p": 1.5,
+      "pos_i": 0.1,
+      "vel_p": 5.0,
+      "vel_i": 0.8,
+      "vel_d": 0.05,
+      "vel_d_alpha": 0.1,
+      "vel_imax": 100.0,
+      "vel_max": 0.5,
+      "depth_ema_alpha": 0.2,
+      "vel_ema_alpha": 0.3,
+      "setpoint_jump_threshold": 0.5,
+      "setpoint_ramp_rate": 0.2,
+      "watchdog_timeout": 0.5
+    },
+    "environment": {
+      "water_density": 1.0
+    }
+  },
+  "joystick_config": {
+    "assignments": {
+      "slot1_guid": "030056fb7e0500000920000000006803",
+      "slot2_guid": "030003f05e0400008e02000000007200",
+      "slot2_index": 1,
+      "slot1_index": 0
+    },
+    "mappings": {}
+  }
+}
