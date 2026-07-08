@@ -1,0 +1,2 @@
+# Shell scripts must use LF on Pi (CRLF breaks #!/bin/bash shebang)
+pi_scripts/*.sh text eol=lf
