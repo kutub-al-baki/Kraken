@@ -1,0 +1,19 @@
+============================================================
+🚀 UIU MARINER - FULL SYSTEM HEALTH CHECK
+============================================================
+[1/4] Checking Web Server (FastAPI)...
+  ✅ Web Server is UP
+  - Pixhawk Connected: True
+  - Joystick Connected: True
+  - Current Depth: -0.142m
+----------------------------------------
+[2/4] Checking Pi Sensor Server (Port 5002)...
+  ❌ Pi Sensor Server is UNREACHABLE: [WinError 10061] No connection could be made because the target machine actively refused it
+----------------------------------------
+[3/4] Checking Direct MAVLink Connection...
+  ✅ Pixhawk is SENDING heartbeats
+  - Raw Pixhawk Depth: -1.4800000190734863m
+----------------------------------------
+[4/4] Checking Frontend Server (Vite)...
+  ✅ Frontend is UP (http://localhost:5173)
+============================================================
