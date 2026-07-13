@@ -1,0 +1,12 @@
+# Professional Depth Hold Tuning Parameters
+# These are Pixhawk/ArduSub parameters for the internal flight controller
+# Save this as depth_tuning.params and upload with python src/upload_all_params.py depth_tuning.params
+
+1	1	PSC_POSZ_P	1.2	9
+1	1	PSC_VELZ_P	5.0	9
+1	1	PSC_VELZ_I	0.6	9
+1	1	PSC_VELZ_D	0.05	9
+1	1	PSC_VELZ_IMAX	100	9
+1	1	PSC_VELZ_MAX	75	9
+1	1	PSC_ACCZ_P	0.5	9
+1	1	BARO_SPEC_GRAV	1.028	9
