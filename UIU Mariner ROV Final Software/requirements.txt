@@ -1,0 +1,24 @@
+# UIU MARINER - Ground Station Dependencies
+# Python 3.8+
+
+
+# Core
+pymavlink>=2.4.40
+pygame>=2.5.2
+
+# Vision
+opencv-python>=4.8.0
+numpy>=1.24.0
+# Green crab YOLO detection (CV mode: crab; optional on GCS, required on Pi for crab mode)
+ultralytics>=8.3.0
+
+# Utilities
+pyserial>=3.5
+
+# Web Server (React Frontend Backend)
+fastapi>=0.109.0
+uvicorn[standard]>=0.27.0
+websockets>=12.0
+python-multipart>=0.0.6
+paramiko>=3.4.0
+httpx>=0.27.0
