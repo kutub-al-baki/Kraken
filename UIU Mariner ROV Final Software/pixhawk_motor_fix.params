@@ -1,0 +1,13 @@
+# RCPassThru Mode - Bypass ArduSub Internal Mixer
+# Maps RC Channel inputs directly to Servo Outputs (no internal mixing)
+# RC1 → Output1, RC2 → Output2, etc.
+# This allows our custom mixer to have full control over motor PWMs.
+
+SERVO1_FUNCTION 51
+SERVO2_FUNCTION 52
+SERVO3_FUNCTION 53
+SERVO4_FUNCTION 54
+SERVO5_FUNCTION 55
+SERVO6_FUNCTION 56
+SERVO7_FUNCTION 57
+SERVO8_FUNCTION 58
